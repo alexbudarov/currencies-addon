@@ -34,6 +34,10 @@
             <groupId>com.amplicode.core</groupId>
             <artifactId>amplicode-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>

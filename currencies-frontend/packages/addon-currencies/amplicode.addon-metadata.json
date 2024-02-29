@@ -3,11 +3,25 @@
   "scripts": [
   ],
   "resources": [
+    {
+      "name": "Currency",
+      "label": "Currency",
+      "recordRepresentation": "getCurrencyRecordRepresentation",
+      "list": "CurrencyList",
+      "create": "CurrencyCreate",
+      "edit": "CurrencyEdit"
+    }
   ],
   "customRoutes": [
   ],
   "menuItems": [
+    {
+      "type": "Menu.ResourceItem",
+      "name": "Currency"
+    }
   ],
   "i18n": [
+    "en",
+    "ru"
   ]
 }

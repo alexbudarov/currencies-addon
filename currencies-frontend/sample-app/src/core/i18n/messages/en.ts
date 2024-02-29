@@ -1,6 +1,7 @@
 import { TranslationMessages } from "ra-core";
 import englishMessages from "ra-language-english";
 import { mergeMessages } from "./mergeMessages";
+import { en as currenciesMessages } from "@sample/addon-currencies";
 
 const messages: TranslationMessages = {
   ...englishMessages,
@@ -12,5 +13,5 @@ const messages: TranslationMessages = {
 
 export const en = mergeMessages(
   messages,
-  [] // place addon messages here
+  [currenciesMessages] // place addon messages here
 );

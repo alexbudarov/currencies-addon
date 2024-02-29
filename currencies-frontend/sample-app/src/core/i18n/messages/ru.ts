@@ -1,6 +1,7 @@
 import russianMessages from "@haulmont/ra-language-russian";
 import { TranslationMessages } from "ra-core";
 import { mergeMessages } from "./mergeMessages";
+import { ru as currenciesMessages } from "@sample/addon-currencies";
 
 const messages: TranslationMessages = {
   ...russianMessages,
@@ -9,5 +10,5 @@ const messages: TranslationMessages = {
 
 export const ru = mergeMessages(
   messages,
-  [] // place addon messages here
+  [currenciesMessages] // place addon messages here
 );

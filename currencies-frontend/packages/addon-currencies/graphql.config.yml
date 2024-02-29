@@ -1,0 +1,4 @@
+schema:
+  - src/core/schema/schema.graphqls
+include:
+  - src/addon/**/*.tsx

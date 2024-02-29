@@ -1,0 +1,56 @@
+{
+  "name": "@sample/addon-currencies",
+  "version": "0.0.1",
+  "description": "Currencies management",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "amplicode.addon-metadata.json"
+  ],
+  "scripts": {
+    "build": "npm run clean && rollup -c",
+    "dev": "npm run clean && node esbuild",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src/",
+    "generate": "graphql-codegen"
+  },
+  "dependencies": {
+    "@apollo/client": "~3.7.7",
+    "@haulmont/ra-language-russian": "^4.0.0",
+    "dayjs": "^1.11.7",
+    "react": "^18.2.0",
+    "react-admin": "=4.15.4"
+  },
+  "devDependencies": {
+    "@amplicode-addon/gql": "file:src/gql",
+    "@graphql-codegen/cli": "^3.0.0",
+    "@graphql-codegen/gql-tag-operations-preset": "^2.0.0",
+    "@graphql-codegen/typescript": "^3.0.0",
+    "@types/node": "^16.18.79",
+    "@types/pluralize": "^0.0.29",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "esbuild": "0.19.12",
+    "eslint": "^8.42.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "=3.0.3",
+    "rollup": "^2.77.4-1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "=5.2.2"
+  },
+  "author": "",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,3 @@
+schema: src/main/resources/graphql/**/*.graphqls
+include:
+  - src/test/resources/graphql-test/**/*.graphql

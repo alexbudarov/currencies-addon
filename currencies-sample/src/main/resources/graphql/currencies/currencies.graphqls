@@ -1,0 +1,29 @@
+extend type Query {
+    currencyList(page: OffsetPageInput): CurrencyResultPage!
+    currency(id: ID!): Currency!
+}
+
+extend type Mutation {
+    deleteCurrency(id: ID!): Void
+    updateCurrency(input: CurrencyInput!): Currency!
+}
+
+type Currency {
+    id: ID
+    name: String!
+    isoCode: String!
+    conversionRate: BigDecimal
+}
+
+type CurrencyResultPage {
+    content: [Currency]
+    totalElements: Long!
+}
+
+input CurrencyInput {
+    id: ID
+    name: String!
+    isoCode: String!
+    conversionRate: BigDecimal @positive
+}
+

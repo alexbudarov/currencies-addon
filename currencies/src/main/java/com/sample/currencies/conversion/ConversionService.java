@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
+import java.util.Optional;
 
 @Service
 public class ConversionService {
@@ -27,5 +28,12 @@ public class ConversionService {
         Currency currency = currencyRepository.findById(currencyId).orElseThrow();
         var mc = new MathContext(2, RoundingMode.HALF_EVEN);
         return amount.divide(currency.getConversionRate(), mc);
+    }
+
+    /**
+     * Load currency by its code.
+     */
+    public Optional<Currency> findByCode(String isoCode) {
+        return currencyRepository.findByIsoCode(isoCode);
     }
 }

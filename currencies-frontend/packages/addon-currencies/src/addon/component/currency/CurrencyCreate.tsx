@@ -49,7 +49,7 @@ export const CurrencyCreate = (props: CreateProps) => {
     return (
         <Create<ItemType> redirect="list" {...props}>
             <SimpleForm onSubmit={save}>
-                <TextInput source="name" validate={required()}/>
+                <TextInput source="name" validate={required()} autoFocus />
                 <TextInput source="isoCode" validate={required()} />
                 <BigDecimalNumberInput source="conversionRate" />
             </SimpleForm>

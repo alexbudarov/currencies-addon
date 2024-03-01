@@ -1,4 +1,4 @@
-import {StringMap} from "ra-core/src/i18n/TranslationMessages";
+import { StringMap } from "react-admin"
 
 export const en: StringMap = {
     resources: {

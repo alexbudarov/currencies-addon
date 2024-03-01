@@ -12,7 +12,7 @@ import {
 } from "react-admin";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import {checkServerValidationErrors} from "../../../core/error/checkServerValidationError";
-import {BigDecimalNumberInput} from "currencies-sample/src/core/components/number/BigDecimalNumberInput";
+import {BigDecimalNumberInput} from "../../../core/components/number/BigDecimalNumberInput";
 
 const CURRENCY = gql(`query Get_Currency($id: ID!) {
     currency(id: $id) {

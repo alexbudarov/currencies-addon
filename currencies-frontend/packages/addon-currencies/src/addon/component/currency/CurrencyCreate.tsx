@@ -11,8 +11,8 @@ import {
     useRedirect,
 } from "react-admin";
 import { FieldValues, SubmitHandler } from "react-hook-form";
-import {BigDecimalNumberInput} from "currencies-sample/src/core/components/number/BigDecimalNumberInput";
 import {checkServerValidationErrors} from "../../../core/error/checkServerValidationError";
+import {BigDecimalNumberInput} from "../../../core/components/number/BigDecimalNumberInput";
 
 const UPDATE_CURRENCY = gql(`mutation Update_Currency($input: CurrencyInput!) {
     updateCurrency(input: $input) {

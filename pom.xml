@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <revision>0.0.1-SNAPSHOT</revision>
+        <revision>0.1.0</revision>
         <amplicodeVersion>0.5.0-SNAPSHOT</amplicodeVersion>
 
         <java.version>17</java.version>

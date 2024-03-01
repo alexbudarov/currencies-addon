@@ -1,6 +1,6 @@
 {
   "name": "@sample/addon-currencies",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Currencies management",
   "publishConfig": {
     "access": "public"

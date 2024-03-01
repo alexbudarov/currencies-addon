@@ -1,4 +1,4 @@
-import { gql } from "@amplicode/gql";
+import { gql } from "@amplicode-addon/gql";
 import { ResultOf } from "@graphql-typed-document-node/core";
 import { useCallback } from "react";
 import {

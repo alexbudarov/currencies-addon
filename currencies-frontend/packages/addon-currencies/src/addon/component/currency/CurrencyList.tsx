@@ -1,4 +1,4 @@
-import {gql} from "@amplicode/gql";
+import {gql} from "@amplicode-addon/gql";
 import {ResultOf} from "@graphql-typed-document-node/core";
 import {ListProps} from "ra-ui-materialui";
 import {Datagrid, DeleteButton, EditButton, List, TextField} from "react-admin";
@@ -31,6 +31,8 @@ export const CurrencyList = (props: Omit<ListProps, "children">) => {
       paginationQueryParam: "page",
     },
   };
+
+  console.log('CURRENCY_LIST: ' + Object.keys(CURRENCY_LIST));
 
   return (
     <List<ItemType> queryOptions={queryOptions} exporter={false} {...props}>

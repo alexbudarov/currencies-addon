@@ -1,7 +1,7 @@
 import {gql} from "@amplicode-addon/gql";
 import {ResultOf} from "@graphql-typed-document-node/core";
 import {ListProps} from "ra-ui-materialui";
-import {Datagrid, DeleteButton, EditButton, List, TextField} from "react-admin";
+import {Datagrid, DeleteButton, EditButton, List, NumberField, TextField} from "react-admin";
 
 const CURRENCY_LIST = gql(`query CurrencyList(
   $page: OffsetPageInput
@@ -32,14 +32,12 @@ export const CurrencyList = (props: Omit<ListProps, "children">) => {
     },
   };
 
-  console.log('CURRENCY_LIST: ' + Object.keys(CURRENCY_LIST));
-
   return (
     <List<ItemType> queryOptions={queryOptions} exporter={false} {...props}>
       <Datagrid rowClick="show" bulkActionButtons={false}>
-        <TextField source="name" />
-        <TextField source="isoCode" />
-        <TextField source="currencyRate" />
+        <TextField source="name" sortable={false} />
+        <TextField source="isoCode" sortable={false}/>
+        <NumberField source="conversionRate" sortable={false}/>
 
         <EditButton />
         <DeleteButton

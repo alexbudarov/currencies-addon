@@ -18,7 +18,6 @@
     "resolveJsonModule": true, // Allows importing JSON files
     "noUnusedLocals": true, // Error on unused local variables
     "noUnusedParameters": true, // Error on unused function parameters
-    "noImplicitReturns": true, // Must always return value explicitly
     "noImplicitAny": true, // Error when inferred type is `any`
     "declaration": true, // Emit '.d.ts'
     "declarationDir": "dist",

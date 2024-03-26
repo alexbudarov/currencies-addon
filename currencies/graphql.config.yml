@@ -1,5 +1,4 @@
 schema:
-  - src/main/resources/currencies/graphql/currencies.graphqls
+  - src/main/resources/currencies/graphql/**/*.graphqls
 include:
-  - src/test/resources/graphql/schema.graphqls
   - src/test/resources/graphql-test/*.graphql
